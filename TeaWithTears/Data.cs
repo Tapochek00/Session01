@@ -9,5 +9,9 @@ namespace TeaWithTears
     public class Data
     {
         public static string code;
+
+        public static bool IsLoginSuccessful = false;
+
+        public static int UserId;
     }
 }

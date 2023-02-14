@@ -48,8 +48,17 @@ namespace TeaWithTears
 
         private void Enter_Click(object sender, RoutedEventArgs e)
         {
-            if (Data.code == codeTb.Text) MessageBox.Show("ДА");
-            else if (codeTb.Text.Length != 0) MessageBox.Show("Нет");
+            if (Data.code == codeTb.Text)
+            {
+                timer.Stop();
+                Data.IsLoginSuccessful = true;
+                var find = from p in db.Login
+                           where p.Number == number.Text
+                           select p.Id;
+                Data.UserId = find.First();
+                Close();
+            }
+            else if (codeTb.Text.Length != 0) MessageBox.Show("Код неверен");
         }
 
         private void number_KeyDown(object sender, KeyEventArgs e)
@@ -71,7 +80,7 @@ namespace TeaWithTears
         DispatcherTimer timer;
         private void timer_Tick(object sender, EventArgs e)
         {
-            MessageBox.Show("А всё а надо было раньше");
+            MessageBox.Show("Получите новый код");
             GetCode.IsEnabled = true;
             img.Visibility = Visibility.Visible;
             Data.code = "";

@@ -68,6 +68,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AbonentsMain.xaml.cs">
+      <DependentUpon>AbonentsMain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="CodeWin.xaml.cs">
       <DependentUpon>CodeWin.xaml</DependentUpon>
@@ -84,6 +87,10 @@
     <Compile Include="Roles.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Page Include="AbonentsMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CodeWin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -155,6 +162,8 @@
     <Resource Include="На авторизацию_Обновление кода.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="CRM.png" />
+    <Resource Include="menu.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>
@@ -165,6 +174,11 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Поддержка пользователей.jpg" />
+    <Resource Include="Биллинг.jpg" />
+    <Resource Include="Управление обрудованием.jpg" />
+    <Resource Include="Абоненты.png" />
+    <Resource Include="Активы.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

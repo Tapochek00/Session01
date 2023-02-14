@@ -1,0 +1,76 @@
+﻿<Window x:Class="TeaWithTears.AbonentsMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeaWithTears"
+        mc:Ignorable="d"
+        Title="AbonentsMain" Height="660" Width="800" Initialized="Window_Initialized"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <Style TargetType="ToggleButton">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Image Source="/menu.png" Width="50"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Border BorderThickness="1" BorderBrush="#FF001C3A" HorizontalAlignment="Left">
+            <StackPanel x:Name="menuPanel">
+                <Image Source="/Лого ТНС.jpg" Width="80" HorizontalAlignment="Right" Margin="0, 0, 0, 10"/>
+                <GroupBox BorderThickness="0" RenderTransformOrigin="0.5,0.5">
+                    <GroupBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform X="-25"/>
+                        </TransformGroup>
+                    </GroupBox.RenderTransform>
+                    <StackPanel>
+                        <RadioButton x:Name="AbonentsRb" GroupName="menu" Margin="0, 0, 0, 10" Width="Auto" HorizontalAlignment="Right">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Абоненты" VerticalAlignment="Center" Margin="20, 0, 140, 0"/>
+                                <Image Source="/Абоненты.png" Height="80"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="EquipmentRb" GroupName="menu" Margin="0, 0, 0, 10" Width="Auto" HorizontalAlignment="Right">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Управление оборудованием" VerticalAlignment="Center" Margin="20, 0, 100, 0"/>
+                                <Image Source="/Управление обрудованием.jpg" Height="80"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="ActivesRb" GroupName="menu" Margin="0, 0, 0, 10" Width="Auto" HorizontalAlignment="Right">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Aктивы" VerticalAlignment="Center" Margin="20, 0, 240, 0"/>
+                                <Image Source="./Активы.png" Height="80"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="BillingRb" GroupName="menu" Margin="0, 0, 0, 10" Width="Auto" HorizontalAlignment="Right">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Биллинг" VerticalAlignment="Center" Margin="20, 0, 220, 0"/>
+                                <Image Source="/Биллинг.jpg" Height="80"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="SupportRb" GroupName="menu" Margin="0, 0, 0, 10" Width="Auto" HorizontalAlignment="Right">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Поддержка пользователей" VerticalAlignment="Center" Margin="20, 0, 95, 0"/>
+                                <Image Source="/Поддержка пользователей.jpg" Height="80"/>
+                            </StackPanel>
+                        </RadioButton>
+                        <RadioButton x:Name="CRMRb" GroupName="menu" Margin="0, 0, 0, 10" Width="Auto" HorizontalAlignment="Right">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="CRM" VerticalAlignment="Center" Margin="20, 0, 220, 0"/>
+                                <Image Source="/CRM.png" Height="80"/>
+                            </StackPanel>
+                        </RadioButton>
+                    </StackPanel>
+                </GroupBox>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
