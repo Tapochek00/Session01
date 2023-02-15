@@ -33,12 +33,14 @@ namespace TeaWithTears
             win.ShowDialog();
 
             if (Data.IsLoginSuccessful == false) Close();
-
-            Login usr = db.Login.Find(Data.UserId);
-            var role = from p in db.Roles
-                       where p.Id == usr.Role
-                       select p.Role;
-            MessageBox.Show(role.First());
+            else
+            {
+                Login usr = db.Login.Find(Data.UserId);
+                var role = from p in db.Roles
+                           where p.Id == usr.Role
+                           select p.Role;
+                MessageBox.Show(role.First());
+            }
         }
 
         private void ToggleButton_Click(object sender, RoutedEventArgs e)
