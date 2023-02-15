@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:TeaWithTears"
         mc:Ignorable="d"
         Height="250" Width="350" WindowStartupLocation="CenterScreen"
-        WindowStyle="None" ResizeMode="NoResize" BorderThickness="0.5" BorderBrush="#FF001C3A">
+        WindowStyle="None" ResizeMode="NoResize" BorderThickness="0.5"
+        BorderBrush="#FF001C3A" Loaded="Window_Loaded">
     <Window.Resources>
         <Style TargetType="Button" x:Key="btnDisabled">
             <Setter Property="Background" Value="#FF9C9B9B"/>

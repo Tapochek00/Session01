@@ -108,5 +108,10 @@ namespace TeaWithTears
                 else MessageBox.Show("Пароль неверен");
             }
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            number.Focus();
+        }
     }
 }

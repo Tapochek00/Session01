@@ -41,8 +41,23 @@ namespace TeaWithTears
             MessageBox.Show(role.First());
         }
 
-        private void ToggleButton_Checked(object sender, RoutedEventArgs e)
+        private void ToggleButton_Click(object sender, RoutedEventArgs e)
         {
+            TranslateTransform trans;
+            if (MenuToggleBtn.IsChecked == true)
+                trans = new TranslateTransform(-200, 0);
+            else trans = new TranslateTransform(0, 0);
+            menuPanel.RenderTransform = trans;
+        }
+
+        private void Rb_Click(object sender, RoutedEventArgs e)
+        {
+            if (AbonentsRb.IsChecked == true) MessageBox.Show("Абоненты");
+            else if (EquipmentRb.IsChecked == true) MessageBox.Show("Управление оборудованием");
+            else if (ActivesRb.IsChecked == true) MessageBox.Show("Активы");
+            else if (BillingRb.IsChecked == true) MessageBox.Show("Биллинг");
+            else if (SupportRb.IsChecked == true) MessageBox.Show("Поддержка пользователей");
+            else if (CRMRb.IsChecked == true) MessageBox.Show("CRM");
         }
     }
 }
